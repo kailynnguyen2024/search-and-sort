@@ -2,6 +2,7 @@ package sort;
 
 import java.util.Arrays;
 
+
 /**
  * Write a description of class Insertion here.
  * 
@@ -16,6 +17,19 @@ public class Insertion
    */
   public static int[] sort(int[] arr) {
     // Your algorithm goes here!
+    for (int i=0; i<arr.length; i++) {
+        int j=i-1;
+        while (j>=0) {
+            if (arr[i] < arr[j]) {
+                j--;                
+            }
+            else {
+                int temp = arr[i];
+                int k = i;
+            }
+        }
+        
+    }
 
   }
   
