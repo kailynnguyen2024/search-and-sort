@@ -16,7 +16,11 @@ public class Merge
    */
   public static int[] sort(int[] arr) {
     // Your algorithm goes here!
-
+    int N = arr.length;
+    if (N<=1) {
+        
+    }
+    return arr;
   }
   
   public static void main(String[] args) {

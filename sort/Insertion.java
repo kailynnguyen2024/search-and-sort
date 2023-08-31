@@ -11,7 +11,7 @@ import java.util.Arrays;
  */
 public class Insertion
 {
-  
+  //3 2 1
   /**
    * Returns the sorted array
    */
@@ -19,29 +19,20 @@ public class Insertion
     // Your algorithm goes here!
     int k;
     int temp;
-    int j;
-    int i = 1;
-    //321
-    //3 is j, 2 is i
-    //j is 0, 1 is i
-    //j is -1
-    //temp is 2
-    //k is 1
-    while (i < arr.length) {
-        j=i-1;
-        while (j>=0) {
-            if (arr[i] < arr[j]) {
-                j--;                
-            }
+    int indexCurrent= 1;
+    while (indexCurrent < arr.length) {
+        int indexPrevious = indexCurrent-1;
+        while (indexPrevious >= 0 && arr[indexCurrent] < arr[indexPrevious]) {
+            indexPrevious--;                
         }
-        temp = arr[i];
-        k = i;
-        while (k>j+1) {
+        temp = arr[indexCurrent];
+        k = indexCurrent;
+        while (k>indexPrevious+1) {
             arr[k] = arr[k-1];
             k--;
         }
         arr[k]=temp;
-        i++;
+        indexCurrent++;
     }
     return arr;
   }
@@ -67,3 +58,5 @@ public class Insertion
   }
 
 }
+
+
