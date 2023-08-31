@@ -1,6 +1,7 @@
 package sort;
 
 import java.util.Arrays;
+import java.util.ArrayList;
 
 /**
  * Write a description of class Merge here.
@@ -17,7 +18,25 @@ public class Merge
   public static int[] sort(int[] arr) {
     // Your algorithm goes here!
     int N = arr.length;
-    if (N<=1) {
+    int middle = N/2;
+    int leftLength = middle;
+    int rightLength = N-leftLength; //just in case the array has an odd number of index
+    int[] left = new int[leftLength];
+    int[] right = new int[N-(rightLength)];
+    if (N>1) {
+        int index = 0;
+        while (index<middle) {
+            left[index] = arr[index];
+            index++;
+        }
+        int rightIndex=0;
+        index=middle;
+        while (index<N) {
+            right[rightIndex]=arr[index];
+            rightIndex++;
+            index++;
+        }
+        
         
     }
     return arr;
